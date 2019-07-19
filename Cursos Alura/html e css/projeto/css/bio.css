@@ -1,0 +1,26 @@
+.citacao-bio-fiat {
+    float: right;
+    background-color: #D9E5E3;
+    border: .5em solid #C2CCCA;
+    padding: 1em;
+    margin: 1em 2em;
+    width: 30ch;
+    box-sizing: border-box;
+    
+}
+
+.citacao-bio-petrobras {
+    float: left;
+    background-color: #D9E5E3;
+    border: .5em solid #C2CCCA;
+    padding: 1em;
+    margin: 1em 2em;
+    width: 30ch;
+    box-sizing: border-box;
+    
+}
+
+.sobre-mim{
+	text-align: center;
+}
+

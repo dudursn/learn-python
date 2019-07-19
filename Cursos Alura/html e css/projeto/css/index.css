@@ -1,0 +1,162 @@
+.blog .link-inicio-post{
+    background-color: #f2fffc;
+}
+.blog .link-inicio-post{
+    color: #F26;
+} 
+.palavra-home{
+    position: absolute;
+    font-size:0.3em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:#D5447E;
+    font-weight: bold;
+}
+header {
+    position: relative;
+}
+.codigo-limpo{
+    top: 25%;
+    right: 65%;
+}
+.css3{
+    top: 25%;
+    left: 65%;
+}
+.html5{ 
+    top: 40%;
+    left: 10%;
+}
+.javascript{   
+    top: 40%;
+    right: 10%;
+}
+.acessibilidade{   
+    top: 60%;
+    right: 10%;
+}
+.responsivo{  
+    top: 60%;
+    left: 10%;
+}
+.otimizacoes{ 
+    top: 48%;
+    left: 25%;
+}
+.agilidade{ 
+    top: 48%;
+    right: 25%;
+}
+.design{
+    top: 66%;
+    left: 75%;
+}
+.boas-praticas { 
+    top: 30%;
+    right: 75%;
+}
+.eficiencia {
+    top: 30%;
+    left: 75%;
+}
+.blog .descricao-inicio-post{
+    /*Position absolute é relativo ao primeiro pai dele ou caso não esteja definido, a página html*/
+    position: absolute;
+    color:#000;
+    background-color: #f2fffc;
+    top:3em;
+    right:4em;
+    left:30%;
+    height: 8em;
+    padding: 1.5em;
+}
+.foto-home {
+    height: 200px;
+}
+.saudacao p {
+    font-size: 1.5em;
+    color: #99A;
+    line-height: 1;
+    padding: 2em;
+}
+.saudacao-inicio {
+    font-size:3em;
+    color: #889;
+}
+.saudacao-ultima-linha {
+    text-align: right;
+    display: block;
+}
+.saudacao strong {
+    color: #000;
+    font-size: 2em;
+}
+.saudacao em {
+    color: #851944;
+    font-size: 4em;
+}
+.botao-index {
+    font-size: 1.25em;
+    background-color: #851944;
+    color: #FFF;
+    padding: .5em;
+    border: .2em solid black;
+    width: 40ch;
+    margin: 2em auto;
+    display: block;
+    text-align: center;
+}
+
+.secao-inicio {
+    padding: 2em;
+}
+
+.secao-inicio h2 {
+    font-size: 3em;
+    text-shadow:10px 10px #000;
+    text-transform: uppercase;
+    margin-bottom: .5em;
+}
+.trabalhos {
+    background-color: #3C1D3D;
+    border-top: 10px solid #000;
+    border-bottom: 10px solid #000;
+}
+.trabalhos h2 {
+    color: #FFF;
+}
+.trabalhos ul {
+    overflow: hidden;
+    border: 10px solid black;
+}
+.trabalhos li {
+    float: left;
+    width: 33.333%;
+}
+.trabalhos img {
+    width: 100%;
+    display: block;
+}
+.blog {
+    background-color: #999;
+    color: #FFF;
+    border-bottom: 10px solid #851944;
+    position:relative;
+}
+.blog li{
+    width:30%;
+}
+.blog li a {
+    color: #FCF;
+}
+footer {
+    background-color: #000;
+    color: #FFF;
+}
+footer a {
+    color: #F99;
+}
+main {
+    width: 100%;
+    padding-bottom: 0;
+    float: none;
+}

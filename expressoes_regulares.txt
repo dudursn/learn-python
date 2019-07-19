@@ -1,0 +1,92 @@
+
+--- EXPRESSÕES REGULARES ---
+    -> Básico - Quantifiers
+        ? - zero ou uma vezes
+        * - zero ou mais vezes
+        {n} - exatamente n vezes
+        {n,} - no mínimo n vezes
+        {n,m} - no mínimo n+1 vezes, no máximo m vezes Ex.:{0,9} começa do 1 e vai até 9
+
+    -> Classe de caracteres 
+        [A-z]
+        [a-z]
+        [0-9]
+        Letras e números:
+            [A-Za-z0-9]
+        \w: word char ou [A-Za-z0-9_]
+            Pesquisar email: [.\w\-]+@[.\w]*
+        \t TAB
+        \n new line (quebra de linha)
+        \r retono de carro (volta o cursor para o inicio da linha)
+        \f avanço de pagina
+        \v vertical TAB - (usado em configuraçoes de impressora)
+        \s = [ \t\n\r\f\v] é whitespaces
+  
+    -> Âncoras: uma forma de encontrar seu texto em uma posição específica
+        \b: word boundary, quero procurar limites de palavras e nao pode haver word char(\w) 
+            \bde\b nao pode haver word char nem antes e depois
+        \B: non word boundary, faz tudo ao contrário do \b
+        ^: quero encontrar o texto no ÍNICIO
+        $: quero encontrar o texto no FIM
+            Ex.:Encontrar o link de um file que é html - file:///C:/Users/roger/javascript/introducao-javascript/index.html
+            Solução: ^file.+\.html$
+
+    -> Grupos
+        (): utilizado para linguagem de programacao trabalhar com grupos depois de encontrar a reges
+            21 de Maio de 1996 [0-3]?\d\s+de\s+[A-Z][a-zç]{3,8}\s+de\s+([12]\d{3})
+                Retorna dois grupos: (A regex)[0] = 21 de Maio de 1996 e (o ano, por causa do parenteses)[1] = 1996
+        '?:' : non-capturing group, nao captura o grupo especificado
+            21 de 401 (\d{2})(?:\sde\s)(\d{3})
+                [0] = 21 de 401 [1] = 21, [2] = 401, nao captura de e  os espaços em brancos
+
+    ->Pipe 
+        | : indica ou
+            (?:caelum.com.br|alura.com.br) = não capturar o grupo que possui caelum.com.br OU alura.com.br
+
+    -> BackReference
+        Definindo um grupo antes pode se pegar a referencia dele para ser usado depois utilizando o index, 
+        lembrando que o primeiro grupo(posição 0) é a expressão que se busca.
+
+        Ex.: <h1 class="text-left">Expressões regulares</h1> ou  <h2 class="text-left">Expressões regulares</h2>
+            <(h1|h2).+?>([\w\sõãí.]+)</\1>
+            [0]-> grupo da expressão
+            [1] -> (h1|h2) referencia '\1' => assim se começar com h1, tem que ter h1 no final ou se for h2, tem que ter h2.
+            '.+?' ->  deixamos o quantifier preguiçoso para não pegar a tag inteira.
+
+    -> Negação: [^]
+        Tudo que não é um[^a](tudo que não é a), pega tudo que não é aquele caractere
+        <h1[^>]+>
+
+    -> Pegar Data no estilo ex.: 28 de Dezembro de 1992 ou 10 de Março de 2012
+        Solução específica: [0-3]?\d\s+de\s+[A-Z][a-zç]{3,8}\s+de\s+[12]\d{3}
+
+    -> Dígito: \d,
+        Pesquisar cpf: \d\d\d.\d\d\d.\d\d\d-\d\d
+            Utilizando QUANTIFIER('{}') : \d{3}.\d{3}.\d{3}-\d{2}
+        Pesquisar cnpj: \d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2}
+        Pesquisar ip(de 1 a 3 numeros):  \d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}
+        Pesquisar cep:  \d{5}-\d{3} 
+
+    -> Colchetes: O símbolo de colchetes ([]) são usados para indicar quais os caracteres queremos considerar,
+        Expressar apenas os números 0, 1, 2 e 3: [0123] ou [0-3](hifen utilizado como range)
+        Expressar apenas aluns caracteres: [;\-!](no caso, ponto e vírgula ou hífen ou exclamação)
+    
+    -> Opcional (?)
+        Pode ou não ter dígito: [\d]?
+
+    -> \W é a non-word char, ou seja tudo que não é um word char. \W é um atalho para [^\w].
+
+    -> \D, por sua vez, é um non-digit, ou seja, \D é um atalho para [^\d]
+
+    -> Exercícios
+        - BALEIRO GARROTE SERROTE GOLEIRO ROTEIRO => 
+            SOLUÇÃO: [A-Z]*ROT[A-Z]*
+        - O username precisa ser da seguinte forma:
+            O limite é de 10 caracteres;
+            O primeiro caractere deve ser uma letra do alfabeto, não pode ser um número;
+            A partir do segundo caractere podemos ter letras maiúsculas, minúsculas e números;
+            SOLUÇÃO: [a-z]+[A-Za-z0-9]{0,9}
+
+    -> Acessar
+        regexr.com
+        regex101.com/

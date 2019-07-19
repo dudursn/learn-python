@@ -1,0 +1,191 @@
+body {
+	font-family: "Crimson Text", "Times New Roman", serif;
+	background-color: #F2FFFC;
+	font-size: 120%;
+	line-height: 1.5;
+}
+
+.titulo-principal {
+	font-size: 300%;
+    text-align: center;
+    background-color: #851944;
+    color: #FFF;
+    padding: 1.25rem;
+    border-bottom: .5rem solid #000;
+}
+.subtitulo-principal {
+	font-size: 0.5em;
+    text-align: center;
+    background-color: #851944;
+    color: #FFF;
+    padding: 1.25rem;
+}
+h1, h2 {
+	font-family: "Open Sans Condensed", "Arial", sans-serif;
+	clear: both;
+}
+
+main h1 {
+	text-align: center;
+	background-color: #851944;
+	color: #FFF;
+	padding: 1.25rem;
+	border-bottom: 10px solid black;
+    font-size: 300%;
+    text-transform: uppercase;
+}
+
+main a{
+    color:#851944;
+}
+
+main div {
+	width: 720px;
+	margin: auto;
+	padding: 30px 0;
+}
+
+p {
+	text-align: justify;
+	margin: 10px 10px;
+}
+
+blockquote {
+	background-color: #D9E5E3;
+	border: 0.5rem solid #C2CCCA;
+    width: 30ch;
+    padding: 16px;
+	box-sizing: border-box;
+	margin: 20px 40px;
+}
+
+strong {
+	font-weight: bold;
+}
+
+em {
+	font-style: italic;
+}
+
+h2 {
+	font-size: 30px;
+	text-align: left;
+}
+
+nav a {
+	color: #F2FFFC;
+}
+
+.navegacao-site {
+    background-color: #3C1D3D;
+    color: #F2FFFC;
+    text-align: center;
+    font-family: "Open Sans Condensed", sans-serif;
+	padding: 20px;
+	position: absolute;
+	top:300px;
+	right:0;
+}
+
+blockquote, aside, footer {
+    padding: 20px;
+}
+
+aside h1 {
+	font-size: 30px;
+	margin-bottom: 25px;
+}
+
+article {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+/*Para ID é cerquilha,que é usado quando temos certeza que não vai se repetir
+#icones-sociais li {
+    display:inline-block;
+    height:40px;
+}
+*/
+
+/* Mas caso se repita, é melhor usar classes*/
+.subtitulo-texto {
+	font-size: 30px;
+}
+
+.icones-redes-sociais li {
+	display: inline-block;
+}
+
+
+
+
+nav a {
+	text-transform: lowercase;
+}
+
+.icones-redes-sociais a {
+	width: 40px;
+	height: 40px;
+	display: block;
+	text-indent: -99999px;
+}
+
+.github {
+	background-image: url(imgs/github.png);
+}
+
+.twitter {
+	background-image: url(imgs/twitter.png);
+}
+
+.linkedin {
+	background-image: url(imgs/linkedin.png);
+}
+
+#rodape-pagina{
+	background-color: #000;
+	color:#FFF;
+	font-family: "Open Sans Condensed", sans-serif;
+	font-size: 15px;
+	position: relative;/* fixed */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+	box-sizing: border-box;
+	padding: 10px 20px;
+	clear: both;
+}
+
+main{
+	float:left;
+	width:85%;
+	padding-bottom: 80px;
+}
+aside, .foto-joao{
+	float:right;
+	box-sizing: border-box;
+	border-left: 10px solid black;
+	border-bottom: 10px solid black;
+	
+}
+aside{
+	clear:right;
+	width:15%;
+	position: relative;
+	
+}
+cite {
+    font-style: italic;
+    float: right;
+}
+
+.foto-joao{
+	position:absolute;
+	width:300px;
+	top: 0px;
+	right:0px;
+
+}
+
+

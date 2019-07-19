@@ -1,0 +1,153 @@
+
+/*Use na div*/
+.borda_div {
+    /*arredondada*/
+    border-radius: 10px;
+
+    /* arredondada Para mozilla*/
+    -moz-border-radis:10px;
+
+    /*arredondada Para chrome*/
+    -webkit-border-radius:10px;
+}
+/* --------------------------------------------------------------------------------------------*/
+/*Transformações nas divs*/
+.borda_transform{
+    /*rotacionar(30 graus)*/
+    transform: rotate(30deg);
+
+    /*aumentar*/
+    transform: scale(1.5);
+
+    /*entortar*/
+    transform: skew(20deg);
+
+    /*transladar*/
+    transform: translate(10px, 50px);
+
+    /* - posso usar assim tbm-
+    transform: skew(20deg)
+        scale(1.5)
+        translate(10px, 50px);
+    */
+
+    /*Transformações geométricas x,y,z*/
+    perspective: 4px ;
+}
+/* --------------------------------------------------------------------------------------------*/
+/*Sombra e opacidade*/
+.shadow{
+
+    text-shadow: 5px 5px #000;
+    box-shadow: 0 0 1em #000;
+
+    /*Sombra da sombra*/
+    box-shadow: 0 0 1em #000, inset 0 0 .5em #FFF;
+    /*Opacidade*/
+    opacity: .8;
+    /* Cores semitransparentes:(Preto semitransparente)*/
+    background-color: rgba(0, 0, 0, 0.3);
+}
+/* --------------------------------------------------------------------------------------------*/
+/* GRADIENTES */
+.esse-gradiente{
+    /* Da um efeito no fundo da tela */
+
+    background-image: linear-gradient(to bottom, #F00, #000);
+    background-image: linear-gradient(to bottom, #F00, #888 80%, #000);
+
+    background-size: 100% 200px;
+    background-repeat: no-repeat;
+
+    background-image: linear-gradient(135deg, transparent, transparent 14px, rgba(0,0,0,.1) 14px, 
+    rgba(0,0,0,.1) 14px, transparent 15px, transparent);
+    background-size: 20px 20px;
+    background-attachment: fixed;
+}
+
+/* --------------------------------------------------------------------------------------------*/
+/*SELETORES AVANÇADOS DO CSS*/
+
+/* '~' selecionar(irmão ~ irmão) os elementos que estão depois de outros elementos */
+li ~ li{
+    margin-top:1em;
+}
+
+/* '+' selecionar(irmão + irmão seguinte) os elementos que estão imediatamente depois de outro elemento */
+img + p{
+    text-indent:0;
+}
+
+/* selecionar(pai > filho) os elementos que estão depois de outros elementos */
+img > p{
+    text-indent:0;
+}
+/*
+sao poderosos e ao mesmo tempo frágeis
+EX.: 
+.noticia > h1 + p
+*/
+/* --------------------------------------------------------------------------------------------*/
+/*PSEUDOCLASSES
+
+    Estruturais - Pegar os filhos específicos do nosso container
+        :nth-child(nomeDaclasse)
+        :nth-child(2n) - pares
+        :nth-child(2n+1) - impares
+        ':first-child', ':last-child'
+        :only-child - filho único
+        tr :nth-child(nomeDaClasse) - TEM Q TER ESPAÇO, pega a tag específica
+    
+    Dinâmicas - atualiza o css dinamicamente sem javascript
+        nomeDaClasse:hover - mouse com foco no elemento
+        nomeDaClasse:focus - teclado, celular, tablet com foco no elemento
+        nomeDaClasse:active - quando estamos clicando no elemento
+        nomeDaClasse:checked - específica para formulários
+
+        
+*/
+/*Atualizar dinamicamente o css sem javascript, feita pelo próprio browser*/
+.botao{
+    border:8px solid purple;
+}
+/* pseudoclasse 'hover'*/
+.botao:hover{
+    background-color: purple;
+}
+
+/* --------------------------------------------------------------------------------------------*/
+/* PSEUDOELEMENTOS 
+    Permite colocar elementos visuais sem poluir o html
+*/
+
+/*Seleciona o primeiro elemento da tag com a letra gigante*/
+p::first-letter{
+    font-size: 3em;
+}
+
+/* Adiciona conteúdo no elemento*/
+blockquote::before{
+    content: '"';
+    font-size:10em;
+    position: absolute;
+}
+/* Adiciona conteúdo no elemento*/
+blockquote::after{
+
+}
+
+/* --------------------------------------------------------------------------------------------*/
+
+
+
+/* --------------------------------------------------------------------------------------------*/
+
+
+
+/* --------------------------------------------------------------------------------------------*/
+
+
+/* --------------------------------------------------------------------------------------------*/
+
+
+
