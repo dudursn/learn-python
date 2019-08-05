@@ -1,0 +1,290 @@
+<!-- Bootstrap 3 -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-topCasaFina" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+
+					<a class="navbar-brand" href="#">TopCasaFina Arquitetura</a>
+				</div>
+
+				<div class="collapse navbar-collapse" id="navbar-topCasaFina">
+					<ul class="nav navbar-nav">
+						<li><a href="#sobre-nos">Sobre Nós</a></li>
+						<li><a href="#nossos-projetos">Nossos Projetos</a></li>
+						<li><a href="#depoimentos">Depoimentos</a></li>
+						<li><a href="#video">Vídeo</a></li>
+						<li><a href="#contato">Contato</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="container topCasaFina-bannerWrapper">
+			<div class="topCasaFina-banner">
+				<h1>TopCasaFina Arquitetura</h1>
+				<p>Projetando a casa dos sonhos desde 2000 A.C</p>
+				<button class="btn btn-primary btn-lg"> Contate-nos agora</button>
+			</div>
+		</div>
+	</header>
+
+	<!--Collapse and panels -->
+	<section id="sobre-nos" class="container">
+		<h2>Sobre Nós</h2>
+
+		<div class="row">
+			<img class="img-responsive col-sm-6" src="img/empresa.jpg">
+
+			<div class="panel-group col-sm-6" id="paineis-sobre">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title" data-toggle="collapse" data-target="#prim-paragrafo" data-parent="#paineis-sobre">Desde 1935</h3>
+					</div>
+					<div class="collapse in" id="prim-paragrafo">
+						<div class="panel-body">
+							<p>Desde 1935 trazendo casas, mansões e prédios lindos paea o mundo.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title" data-toggle="collapse" data-target="#seg-paragrafo" data-parent="#paineis-sobre">Preços acessíveis</h3>
+					</div>
+					<div class="collapse" id="seg-paragrafo">
+						<div class="panel-body">
+							<p>Preços a partir de R$1000,00</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title" data-toggle="collapse" data-target="#ter-paragrafo" data-parent="#paineis-sobre">Alegria em colaborar para um mundo mais bonito</h3>
+					</div>
+					<div class="collapse" id="ter-paragrafo">
+						<div class="panel-body">
+							<p>Trazendo alegria para a vida das pessoas que tem dinheiro para gastar.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Jumbotron -->
+	<div class="jumbotron">
+		<div class="container">
+			<h3>Mais de 300 prêmios em design e em conforto!</h3>
+			<p>Mais de 5 milhões de clientes satisfeitos em todo o mundo.</p>
+		</div>
+	</div>
+
+	<!--
+		1) col-xs-* é para dispositivos extra small, ou seja, bem pequenos tais como smartphones.
+
+		2) col-sm-* é para dispositivos small, ou seja, apenas pequenos tais como tablets e celulares maiores deitados.
+
+		3) col-md-* é para dispositivos médios, tais como tablets maiores e monitores pequenos.
+
+		4) col-lg-* é para dispositivos large, ou seja, grandes, tais como computadores desktop com monitores grandes.
+	--->
+
+	<!-- Figure, thumbnail, img, captions-->
+	<section class="container" id="#nossos-projetos">
+		<h2 >Nossos projetos</h2>
+		<div class="row">			
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<figure class="thumbnail">
+					<img src="img/projetos/casa-castelo.png" alt="Imagem da Casa Castelo">
+					<figcaption class="caption">
+						<h3>Casa Castelo</h3>
+						<p>A Casa Castelo é o último lançamento da TopCasaFina Arquitetura, feita para um monge.</p>
+					</figcaption>
+				</figure>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<figure class="thumbnail">
+					<img src="img/projetos/casa-lago.png" alt="Imagem da Casa Lago">
+					<figcaption class="caption">
+						<h3>Casa Lago</h3>
+						<p>A Casa do Lago foi lar de inúmeras pessoas que conheciam o presidente da época.</p>
+					</figcaption>
+				</figure>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<figure class="thumbnail">
+					<img src="img/projetos/mercado-marapira.png" alt="Imagem do Mercado Marapira">
+					<figcaption class="caption">
+						<h3>Mercado Marapira</h3>
+						<p>O mercado Marapira foi projetado nos mínimos detalhes na arquitetura baseada em frutas.</p>
+					</figcaption>
+				</figure>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<figure class="thumbnail">
+					<img src="img/projetos/palacio-dionisio.png" alt="Imagem do Palácio Dionísio">
+					<figcaption class="caption">
+						<h3>Palácio Dionísio</h3>
+						<p>O palácio Dionísio foi eleito pela revista 'Grandes palácios' como o palácio mais lindo do mundo.</p>
+					</figcaption>
+				</figure>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<figure class="thumbnail">
+					<img src="img/projetos/residencia-ludi.png" alt="Imagem da Residência Ludi">
+					<figcaption class="caption">
+						<h3>Residência Ludi</h3>
+						<p>A residência Ludi foi projetada para ser a mais bela casa de São Paulo pela revista Housing.</p> lindo do mundo.</p>
+					</figcaption>
+				</figure>
+			</div>
+		</div>
+	</section>
+
+	<!-- Carrossel -->
+	<section id="depoimentos">
+		<div class="titulo-depoimentos">
+			<h2 class="container">Depoimento de clientes</h2>
+		</div>
+		<div id="carousel-depoimentos" class="carousel slide" data-ride="carousel">
+			<!-- Indicadores (São as bolinhas) -->
+			<ol class="carousel-indicators">
+				<li data-target="#carousel-depoimentos" data-slide-to="0" class="active"></li>
+				<li data-target="#carousel-depoimentos" data-slide-to="1"></li>
+				<li data-target="#carousel-depoimentos" data-slide-to="2"></li>
+			</ol>
+
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner" role="listbox">
+				<figure class="item active">
+					<img src="img/depoimentos/depoimento1.png" alt="Depoimento de Yuri Padilha">
+					<figcaption class="carousel-caption">
+						<h3>Yuri Padilha</h3>
+						<p>Gostei muito e rápido o serviço.</p>
+					</figcaption>
+				</figure>
+				
+				<figure class="item">
+					<img src="img/depoimentos/depoimento2.png" alt="Depoimento de Fernando Stafaneni">
+					<figcaption class="carousel-caption">
+						<h3>Fernando Stafaneni</h3>
+						<p>Excelente trabalho.</p>
+					</figcaption>
+				</figure>
+
+				<figure class="item">
+					<img src="img/depoimentos/depoimento3.png" alt="Depoimento de Caio Sauza">
+					<figcaption class="carousel-caption">
+						<h3>Caio Sauzas</h3>
+						<p>Gostei, competência em primeiro lugar.</p>
+					</figcaption>
+				</figure>
+			</div>		
+
+			<!-- Controles (São as setas) -->
+			<a class="left carousel-control" href="#carousel-depoimentos" role="button" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				<span class="sr-only">Anterior</span>
+			</a>
+			<a class="right carousel-control" href="#carousel-depoimentos" role="button" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				<span class="sr-only">Próximo</span>
+			</a>
+
+		</div>
+	</section>
+
+	<div class="container">
+		<div class="row">
+			<!-- Video (Responsive Embed) "embedar" um vídeo e deixá-lo responsivo para o site. -->
+			<section id="video" class="col-sm-6">
+				<h2>Vídeo Institucional</h2>
+				<!-- 4:3 aspect ratio -->
+				<div class="embed-responsive embed-responsive-4by3">
+					<iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/9I-uytvk4e4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</section>
+
+			<!-- Forms -->
+			<section id="contato" class="col-sm-6">
+				<h2>Contato</h2>
+				<p>Entre em contato conosco</p>
+				<form>
+					<div class="form-group">
+						<label for="contato-nome">Nome:</label>
+						<input type="text" class="form-control" id="contato-nome" placeholder="Seu nome">
+					</div>
+
+					<div class="form-group">
+						<label for="contato-email">Email:</label>
+						<div class="input-group">
+							<div class="input-group-addon">@</div>
+							<input type="email" class="form-control" id="contato-email" placeholder="Seu email">
+						</div>
+					</div>
+		    		<!--
+		    		-->
+		    		<div class="grupo-radio">
+		    			<div class="radio">
+		    				<label>
+		    					<input type="radio" name="tipo-pessoa" value="fisica" checked>
+		    					Pessoa Física
+		    				</label>
+		    			</div>
+		    			<div class="radio">
+		    				<label>
+		    					<input type="radio" name="tipo-pessoa" value="juridica">
+		    					Pessoa Jurídica
+		    				</label>
+		    			</div>
+		    		</div>
+		    		<div class="form-group">
+		    			<select class="contato-select form-control" name="tipo-solicitacao">
+		    				<option disabled selected>Tipo de Situação</option>
+		    				<option>Casa</option>
+		    				<option>Apartamento</option>
+		    				<option>Mansão</option>
+		    			</select>	
+		    		</div>
+		    		
+		    		<button type="button" class="btn btn-primary">Enviar</button>
+	    		</form>
+	    	</section>
+		</div>
+	</div>
+
+<footer>
+	<address>
+		<strong>TopCasaFina Arquitetura</strong><br>
+		Rua Vergueiro, 3185, Vila Mariana<br>
+		São Paulo, SP<br>
+	</address>
+	<address>
+		Tel: (11) 5571-2751 ou 5083-3884<br>
+		E-mail: contato.topcasafina@alura.com.br<br>
+	</address>
+</footer>
+
+
+<script src="jquery.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<script src="js/navbar-animation-fix.js"></script>
+</body>
+</html>

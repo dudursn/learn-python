@@ -1,0 +1,109 @@
+html, 
+body {
+	/*Para definirmos a altura em porcentagem do nosso <header> 
+	Precisamos definir a altura para todas as tags pais dela, no caso, o <body> e o <html>. */
+    height: 100%;
+}
+
+header {
+	/*imagem de fundo*/
+    background-image: url(../img/castelo.jpg);
+    /*colocar a imagem para cobrir o fundo todo */
+    background-size: cover; 
+    /*Centraliza e coloca no topo*/
+    background-position:top center;
+    /*é mostrada na tela toda a imagem, tanto em celular quantono pc*/
+    height: 100%;
+    /*Em relação ao filho mais próximo*/
+    position: relative;
+}
+
+header h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.topCasaFina-banner{
+	/*Cor do texto que esta dentro do banner*/
+	color:#FFF;
+	/*Define a cor preta e o ultimo, a opacidade*/
+	background-color: rgba(0, 0, 0, 0.6);
+	/*Espaçamento interno do banner em relação as 4 direçoes:; 20 20 20 20*/
+	padding: 20px;
+	/*Define a largura do banner*/
+	width: 80%;
+
+	max-width: 320px;
+	/*Coloca bordas arredondadas*/
+	border-radius: 8px;
+	/*Posição absoluta em relação ao header, que é o pai mais proximo*/
+	position: absolute;
+	/*posicionamento em relação ao eixo horizontal */
+	top: 50% ;
+	/* e ao eixo vertical */
+    left: 40%;
+    /*  deslocar metade do tamanho da chamada para direita e para baixo */
+    transform: translate(-40%, -40%);
+
+    transition: 0.3s;
+}
+
+#paineis-sobre {
+	/*Espaçamento externo*/
+    margin-top: 20px;
+}
+
+@media(min-width: 768px){
+
+	#paineis-sobre {
+    	margin-top: 0;
+    }
+
+}
+
+@media(min-width: 992px) {
+	.topCasaFina-banner {
+		left: 0;
+		transform: translate(0, -80%);
+		width: 50%;
+	}
+
+	.topCasaFina-bannerWrapper {
+		position: relative;
+		height: 100%;
+	}
+}
+
+.titulo-depoimentos{
+	/*Cor de fundo*/
+	background-color: #0275D8;
+	padding-top: 25px;
+	padding-bottom :25px;
+	color: #FFF;
+	margin-bottom: 0px;
+	font-size: 24px;
+}
+
+.contato-select, 
+.grupo-radio { 
+    width: 50%;
+    /*Ficam agrupados na mesma linha*/
+    display: inline-block;
+    /*Alinhamento vertical*/
+    vertical-align: top;
+}
+
+.grupo-radio .radio:first-child {
+    margin-top: 0;
+}
+
+footer {
+    background-color: #333;
+    color:#FFF;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer address:last-child{
+	margin-bottom: 0px;
+}
