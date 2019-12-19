@@ -1,0 +1,36 @@
+Criando uma rota
+	routes > web.php
+		Route::get($uri, $callback);
+		Route::post($uri, $callback);
+		Route::put($uri, $callback);
+		Route::patch($uri, $callback);
+		Route::delete($uri, $callback);
+		Route::options($uri, $callback);
+
+	Exemplos:
+
+		//Chama o método listarSeries encontrado na classe SeriesController
+			Route::get("/series", "SeriesController@listarSeries");
+		//Chama o método inicio encontrado na classe Pasta\TesteController (com namespace)
+			Route::get("/ola", "Pasta\TesteController@inicio");
+
+Modelo MVC 
+
+	Controllers ficam na pasta app/Http/Controllers
+
+	Models ficam na raiz da pasta app/
+
+	Views ficam na pasta resources/views/
+
+Lidando com requisições
+
+	use Illuminate\Http\Request;
+
+	Request $request;
+	echo $request->url();
+	//Mostra os parametros querystring
+	var_dump($request->query() );
+	$id = $request->query("id");
+	$nome = $request->query("nome");
+	echo $id;
+	echo $nome;
