@@ -1,5 +1,6 @@
 Criando uma rota
 	routes > web.php
+		-> https://laravel.com/docs/5.8/routing
 		Route::get($uri, $callback);
 		Route::post($uri, $callback);
 		Route::put($uri, $callback);
@@ -22,8 +23,26 @@ Modelo MVC
 
 	Views ficam na pasta resources/views/
 
-Lidando com requisições
+Lidando com Views
+	-> https://laravel.com/docs/5.8/blade
+	As views são localizadas na pasta resources/views
+	view('nomeDoarquivo');
+	view('pasta.nomeDoArquivo');
+	Ex.: view('series/index');
 
+	Utilizar o blade
+		@extends("layout")
+
+		@section("cabecalho")
+		Séries
+		@endsection
+
+		@foreach($ts as $t)	
+			sadsadsad
+		@enforeach
+		
+Lidando com requisições
+	->https://laravel.com/docs/5.8/requests
 	use Illuminate\Http\Request;
 
 	Request $request;
@@ -34,3 +53,9 @@ Lidando com requisições
 	$nome = $request->query("nome");
 	echo $id;
 	echo $nome;
+
+Utilizando Migrations
+	->https://laravel.com/docs/5.8/migrations
+	php artisan make:migration nome_da_migracao
+	php artisan migrate
+		

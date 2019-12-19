@@ -15,6 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//Testes para fins didáticos
 Route::get("/ola", "Pasta\TesteController@inicio");
-Route::get("/series", "SeriesController@listarSeries");
 Route::get("/requisicoes", "SeriesController@testarRequests");
+
+//Aulas
+Route::get("/series", "SeriesController@listarSeries");
+Route::get("/series/criar", "SeriesController@create");
+

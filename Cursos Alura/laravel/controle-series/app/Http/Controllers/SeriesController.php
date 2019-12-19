@@ -14,18 +14,22 @@ class SeriesController extends Controller
     		"Agents of SHIELD"
     	];
 
-    	$html = "<ul>";
+    	return view("series.index", [
+    		"series" => $series
+    	]);
+    	/*
+    		Ou 
+    		return view( "series.index", compact("series") );
+    	*/
+    }
 
-    	foreach ($series as $serie) {
-    		$html .= "<li>$serie</li>";
-    	}
-    	$html .= "</ul>";
-
-    	return $html;
+    public function create(){
+    	
+    	return view("series.create");
     }
 
     public function testarRequests(Request $request){
-    	
+
     	//Mostra a url
     	echo $request->url() . "<br>";
 
