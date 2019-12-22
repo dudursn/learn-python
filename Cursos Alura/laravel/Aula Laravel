@@ -15,6 +15,17 @@ Criando uma rota
 		//Chama o método inicio encontrado na classe Pasta\TesteController (com namespace)
 			Route::get("/ola", "Pasta\TesteController@inicio");
 
+Nomeando rotas
+
+	Route::get("/series", "SeriesController@listarSeries")->name("listar_series");
+	No html: 
+		href="{{ route("listar_series")}}"
+	No controller: 
+		return redirect()->route("listar_series");
+	Com parametros:
+		Route::get("/teste/{id}", "TesteController@teste")->name("profile");
+		return redirect()->route("profile", ["id" => 1]);
+
 Modelo MVC 
 
 	Controllers ficam na pasta app/Http/Controllers
@@ -22,6 +33,8 @@ Modelo MVC
 	Models ficam na raiz da pasta app/
 
 	Views ficam na pasta resources/views/
+
+	php artisan make:model ModelName -m
 
 Lidando com Views
 	-> https://laravel.com/docs/5.8/blade
@@ -41,6 +54,8 @@ Lidando com Views
 			sadsadsad
 		@enforeach
 		
+Controllers
+	php artisan make:controller NameController
 Lidando com requisições
 	->https://laravel.com/docs/5.8/requests
 	use Illuminate\Http\Request;
@@ -59,3 +74,38 @@ Utilizando Migrations
 	php artisan make:migration nome_da_migracao
 	php artisan migrate
 		
+Sessões
+		$request->session()
+			->flash(
+				"mensagem",
+				"Série removida com sucesso"
+			); ou put()
+
+		$mensagem = $request->session()->get("mensagem");
+
+Validação de regras em formulario
+	//Dentro da pasta "Http", terá surgido uma nova pasta "Requests"
+	> php artisan make:request SeriesFormRequest
+
+	public function authorize () {
+		return true;
+	}
+
+	public function rules () {
+		return [
+			'nome' => 'required|min:3'
+		];
+	}
+
+	public function messages (){
+		return [
+			'nome.required' => 'O campo nome é obrigatório',
+			'nome.min' => 'O campo nome precisa ter pelo menos três caracteres'
+		];
+	}
+
+	Utilizando nos controllers: SeriesFormRequest $request
+
+	=>Mais informações: https://laravel.com/docs/5.7/validation
+
+	
